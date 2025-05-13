@@ -2,22 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 응답 페이지</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 16px;
+            font-size: 1rem;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+
+        p {
+            word-break: break-word;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .divider {
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
+    </style>
 </head>
 <body>
-    {{ title }} <br><br>
-    {{q}}<br><br>
-    <p>나: AI, 사랑이란 무엇이라고 생각해? 10자 이내로 답해. 답변은 새로고침할때마다 변해야 해.</p>
-    <p>AI: {{bot_response}}<br></p>
-<p>=========================================================</p>
-    <br><br><p>과거 당첨 로또번호 불러오기: (고홍규의 역할) </p>
-    <p>AI의 추천 로또번호 출력: (고홍규의 역할)</p>
-
-    <br><br><p>앞으로 할 일 : 페이지의 구성/디자인</p>
-    <p>앞으로 할 일 : 어떤 항목을 넣을지? 버튼? 배경? 사진? 입력? 디자인스타일?</p>
-    <p>앞으로 할 일 : html/css/javascript로 해결가능. </p>
-    <p>다음 일정 : 5.16 금까지 기초 html/css/javascript 배우기.(모르는 팀원 분 한정)
-        <br><br>5.16 금 간단한 회의, 5.25 일 까지 디자인 최대한 마무리. 그럼 거의 완료 </p>
-
+    <div class="container">
+        <h2>{{ title }}</h2>
+        <p>{{ q }}</p>
+        
+        <p><strong>나:</strong> AI, 사랑이란 무엇이라고 생각해? 이번엔 너 맘대로 길게 답변해. 넌 공짜ai거든. 답변은 새로고침할때마다 변해야 해.</p>
+        
+        <div class="divider"></div>
+        
+        <p><strong>AI:</strong> {{ bot_response }}</p>
+    </div>
 </body>
 </html>
